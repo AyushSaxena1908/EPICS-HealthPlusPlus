@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="header">
+        <header class="header-content">
+            <a href="#logo" class="logo">
+                <img src="img/colored_logo.png" alt="logoImage" class="logo-icon" />
+                <span class="logo-text"  >Health++</span>
+            </a>
+        </header>
+    </div>
+    <div class="container">
+        <div class="contact-logo">
+            <img src="img/contact-logo.jpg" alt="contact logo" class="contact-icon" />
+            <h1>Contact Us</h1>
+        </div>
+        <p class="contact-info">If you have any questions, feel free to reach out to us.</p>
+        <div class="contact-info">
+            <p><strong>Email:</strong> sumitsahu5945@gmail.com</p>
+            <p><strong>Phone:</strong> 8319394755</p>
+        </div>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+                
+            <!-- <label for="mob">Contact:</label>
+            <input type="tel" id="mob" required pattern="[0-9]{10}" placeholder="Enter your Contact" required> -->
+            <label for="mob">Contact:</label>
+            <input type="tel" id="mob" name="phone" required pattern="[0-9]{10}" 
+            maxlength="10" placeholder="Enter your Contact" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+
+            
+            <label for="message">Message:</label>
+            <textarea id="message" placeholder="Enter your message" required></textarea>
+                
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Google Map Section -->
+    <div class="map-container" style="margin-top: 20px; text-align: center;">
+        <h2>Our Location</h2>
+        <iframe
+            width="100%"
+            height="400"
+            frameborder="0"
+            style="border:0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.535869964504!2d76.84871217598861!3d23.077471479135394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397ce9ceaaaaaaab%3A0xa224b6b82b421f83!2sVIT%20Bhopal%20University!5e0!3m2!1sen!2sin!4v1740575181859!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+    <div class="footer-container">
+        <footer class="footer">
+    
+            <div class="footer-top">
+    
+                <div class="comp-logo">
+                    <a class="logo-link" href="#">
+                        <img class="logo-svg" src="img/colored_logo.png"/>
+                        Health++
+                    </a>
+                </div>
+                <p class="filler-text">Seamless Recovery for Better Futures.</p>
+                <div class="social">
+                        <a class="social-link" href="#">
+                            <img src="./instagram.svg" class="social-icon" />
+                        </a>
+                        <a class="social-link">
+                            <img src="./linkedin.svg" class="social-icon" />
+                        </a>
+                        <a class="social-link">
+                            <img src="./Microsoft.svg" class="social-icon" />
+                        </a>
+                        <a class="social-link">
+                            <img src="./twitter.svg" class="social-icon" />
+                        </a>
+                </div>
+            </div>
+    
+            <div class="footer-grid">
+                        <!-- column 1 -->
+                <div class="footer-grid-column">
+                            <div class="footer-grid-heading">
+                                Products
+                            </div>
+                            <ul class="footer-links-list">
+                                <li>
+                                    <a href="#overview" class="footer-link">Overview</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Subscriptions</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Pricing</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Customers</a>
+                                </li>
+                            </ul>
+                </div>
+                        <!-- column 2 -->
+                <div class="footer-grid-column">
+                            <div class="footer-grid-heading">
+                                Company
+                            </div>
+                            <ul class="footer-links-list">
+                                <li>
+                                    <a href="#overview" class="footer-link">About</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Investor Relations</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Jobs</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Press</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Blog</a>
+                                </li>
+                            </ul>
+                </div>
+                        <!-- column 3 -->
+                <div class="footer-grid-column">
+                            <div class="footer-grid-heading">
+                                Support
+                            </div>
+                            <ul class="footer-links-list">
+                                <li>
+                                    <a href="#overview" class="footer-link">Contact</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Documentation</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Chat</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">FAQ</a>
+                                </li>
+                            </ul>
+                </div>
+                        <!-- column 4 -->
+                <div class="footer-grid-column">
+                            <div class="footer-grid-heading">
+                                Legal
+                            </div>
+                            <ul class="footer-links-list">
+                                <li>
+                                    <a href="#overview" class="footer-link">Terms of Service</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Cookie Settings</a>
+                                </li>
+                                
+                            </ul>
+                </div>
+            </div>
+        </footer>
+        <div class="footer-copyright">
+            © 2024 - Present Health++. All rights reserved.
+        </div>
+    </div>
+    <script>
+        document.querySelector('#contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+    // Get form values
+        const name = document.querySelector('#name').value;
+        const mob = document.querySelector('#mob').value;
+        const message = document.querySelector('#message').value;
+
+    // Encode the email details
+        const recipient = "sumitsahu5945@gmail.com";
+        const subject = encodeURIComponent("Contact Form Inquiry from " + name);
+        const body = encodeURIComponent(`Name: ${name}\nMobile: ${mob}\n\nMessage:\n${message}`);
+
+    // Use mailto instead of Gmail URL
+        const mailtoLink = `mailto:${recipient}?subject=${subject}&body=${body}`;
+    
+        window.location.href = mailtoLink; // Open default email client
+});
+
+        
+    </script>
+</body>
+</html>

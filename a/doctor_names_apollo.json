@@ -1,0 +1,208 @@
+{
+  "doctors": [
+    {
+      "name": "Dr. A D Suri",
+      "occupation": "Nephrologist",
+      "experience": "22 years",
+      "availability": "Monday to Saturday, 10:00 AM - 5:30 PM"
+    },
+    {
+      "name": "Dr. Akhil Kumar Tiwari",
+      "occupation": "Internal Medicine Specialist",
+      "experience": "37 years",
+      "availability": "Monday to Saturday, 10:00 AM - 4:00 PM"
+    },
+    {
+      "name": "Dr. Akhilesh Agarwal",
+      "occupation": "Dermatologist",
+      "experience": "19 years",
+      "availability": "Monday, Wednesday, Friday: 9:00 AM - 11:00 AM; 3:00 PM - 5:00 PM; Tuesday, Thursday, Saturday: 9:00 AM - 11:00 AM"
+    },
+    {
+      "name": "Dr. Amit Ganguli",
+      "occupation": "ENT Specialist",
+      "experience": "38 years",
+      "availability": "Monday to Friday, 6:00 PM - 7:00 PM"
+    },
+    {
+      "name": "Dr. Anand Jat",
+      "occupation": "Internal Medicine Specialist",
+      "experience": "8 years",
+      "availability": "Monday to Friday, 4:00 PM - 7:00 PM"
+    },
+    {
+      "name": "Dr. Anandita Milind Desai",
+      "occupation": "General Surgeon",
+      "experience": "4 years",
+      "availability": "Monday to Saturday: 9:00 AM - 5:00 PM; 6:00 PM - 8:00 PM"
+    },
+    {
+      "name": "Dr. Anupa Walia Lokwani",
+      "occupation": "Obstetrician and Gynecologist",
+      "experience": "23 years",
+      "availability": "Monday to Saturday, 9:00 AM - 5:30 PM"
+    },
+    {
+      "name": "Dr. Arun Tiwari",
+      "occupation": "Rheumatologist",
+      "experience": "5 years",
+      "availability": "Sunday to Saturday, 9:00 AM - 5:30 PM"
+    },
+    {
+      "name": "Dr. Atulya Saurabh",
+      "occupation": "Geriatrician",
+      "experience": "26 years",
+      "availability": "Wednesday, 9:00 AM - 11:00 AM"
+    },
+    {
+      "name": "Dr. Bhupendra Kumar Gupta",
+      "occupation": "Pediatrics & Neonatology Specialist",
+      "experience": "6 years",
+      "availability": "Monday to Saturday: 10:00 AM - 5:30 PM; 6:00 PM - 8:00 PM"
+    },
+    {
+      "name": "Dr. Chaitanya Kulkarni",
+      "occupation": "Nephrologist",
+      "experience": "8 years",
+      "availability": "Sunday to Saturday, 10:00 AM - 5:30 PM"
+    },
+    {
+      "name": "Dr. Chetan Singh Dhosariya",
+      "occupation": "Orthopedician",
+      "experience": "4 years",
+      "availability": "Monday to Saturday, 9:00 AM - 5:30 PM"
+    },
+    {
+      "name": "Dr. Garima Pandey",
+      "occupation": "Neurologist",
+      "experience": "5 years",
+      "availability": "Monday to Saturday: 9:00 AM - 10:00 AM; 11:00 AM - 5:30 PM"
+    },
+    {
+      "name": "Dr. Gaurav Khandelwal",
+      "occupation": "Cardiologist",
+      "experience": "9 years",
+      "availability": "Monday to Saturday, 9:00 AM - 5:30 PM"
+    },
+    {
+      "name": "Dr. Gopal Batni",
+      "occupation": "Internal Medicine Physician",
+      "experience": "39 years",
+      "availability": "Sunday to Saturday, 10:00 AM - 5:30 PM"
+    },
+    {
+      "name": "Dr. Khushboo Saxena",
+      "occupation": "Pulmonologist",
+      "experience": "10 years",
+      "availability": "Sunday to Saturday, 9:00 AM - 5:30 PM"
+    },
+    {
+      "name": "Dr. Krishna Anand",
+      "occupation": "General Surgeon",
+      "experience": "20 years",
+      "availability": "Monday to Saturday, 4:30 PM - 6:30 PM"
+    },
+    {
+      "name": "Dr. Manupriya Madhavan",
+      "occupation": "Obstetrician and Gynecologist",
+      "experience": "4 years",
+      "availability": "Monday, Tuesday, Thursday to Saturday: 10:00 AM - 2:00 PM; 4:30 PM - 7:00 PM"
+    },
+    {
+      "name": "Dr. Mayur Agarwal",
+      "occupation": "Endocrinologist",
+      "experience": "10 years",
+      "availability": "Monday to Saturday, 10:00 AM - 1:00 PM"
+    },
+    {
+      "name": "Dr. Nand Kishore Arvind",
+      "occupation": "Urologist",
+      "experience": "8 years",
+      "availability": "Sunday to Saturday, 10:00 AM - 5:30 PM"
+    },
+    {
+      "name": "Dr. Nirendra Rai",
+      "occupation": "Neurologist",
+      "experience": "18 years",
+      "availability": "Monday, Tuesday, Thursday to Saturday: 9:00 AM - 10:00 AM"
+    },
+    {
+      "name": "Dr. Pallavi Agarwal",
+      "occupation": "Obstetrician and Gynecologist",
+      "experience": "16 years",
+      "availability": "Monday to Saturday: 9:00 AM - 10:00 AM; 12:00 PM - 2:00 PM"
+    },
+    {
+      "name": "Dr. Prateek Tiwari",
+      "occupation": "Medical Oncologist",
+      "experience": "14 years",
+      "availability": "Monday to Saturday, 4:30 PM - 6:30 PM"
+    },
+    {
+      "name": "Dr. Priyanka Singh",
+      "occupation": "Pediatrician",
+      "experience": "15 years",
+      "availability": "Monday to Saturday, 9:00 AM - 5:30 PM"
+    },
+    {
+      "name": "Dr. Rohini Singh Chauhan",
+      "occupation": "Dermatologist",
+      "experience": "11 years",
+      "availability": "Monday to Saturday, 10:00 AM - 5:00 PM"
+    },
+    {
+      "name": "Dr. Sandeep Parashar",
+      "occupation": "Cardiologist",
+      "experience": "8 years",
+      "availability": "Monday to Saturday, 9:00 AM - 1:00 PM"
+    },
+    {
+      "name": "Dr. Sanjay Sharma",
+      "occupation": "Orthopedician",
+      "experience": "16 years",
+      "availability": "Monday to Friday, 3:00 PM - 6:00 PM"
+    },
+    {
+      "name": "Dr. Sarita Soni",
+      "occupation": "Obstetrician and Gynecologist",
+      "experience": "22 years",
+      "availability": "Monday to Saturday, 9:00 AM - 1:00 PM"
+    },
+    {
+      "name": "Dr. Shubhi Rathi",
+      "occupation": "Neuro Physiotherapist",
+      "experience": "7 years",
+      "availability": "Monday to Saturday, 9:00 AM - 5:30 PM"
+    },
+    {
+      "name": "Dr. Shubhranshu Mishra",
+      "occupation": "Gastroenterologist",
+      "experience": "5 years",
+      "availability": "Monday to Friday, 9:00 AM - 5:00 PM"
+    },
+    {
+      "name": "Dr. Sumit Sharma",
+      "occupation": "Plastic Surgeon",
+      "experience": "12 years",
+      "availability": "Monday to Friday, 10:00 AM - 7:00 PM"
+    },
+    {
+      "name": "Dr. Sunil Agarwal",
+      "occupation": "General Physician",
+      "experience": "15 years",
+      "availability": "Monday to Saturday, 9:00 AM - 2:00 PM; 4:00 PM - 7:00 PM"
+    },
+    {
+      "name": "Dr. Varun Soni",
+      "occupation": "Pediatrician",
+      "experience": "6 years",
+      "availability": "Monday to Saturday, 10:00 AM - 4:00 PM"
+    },
+    {
+      "name": "Dr. Vivek Chaturvedi",
+      "occupation": "Orthopedician",
+      "experience": "10 years",
+      "availability": "Monday to Saturday, 9:00 AM - 6:00 PM"
+    }
+  ]
+}

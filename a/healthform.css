@@ -1,0 +1,152 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #e6f0ff, #f9fbff);
+    color: #333;
+    padding: 30px;
+    min-height: 100vh;
+  }
+  
+  /* Header */
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  header h1 {
+    font-size: 2.8rem;
+    color: #0073e6;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* Intro Card */
+  .intro-card {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    max-width: 900px;
+    margin: 0 auto 40px;
+    flex-wrap: wrap;
+  }
+  
+  .intro-card img {
+    width: 200px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .intro-card div {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .intro-card h2 {
+    color: #0073e6;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Form Section */
+  .form-section {
+    background: #fff;
+    padding: 35px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  label {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  /* Stylish Checkbox Group */
+  .checkbox-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  
+  .checkbox-group label {
+    background-color: #f2f7ff;
+    padding: 12px 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+  }
+  
+  .checkbox-group input[type="checkbox"] {
+    accent-color: #0073e6;
+    transform: scale(1.2);
+  }
+  
+  .checkbox-group label:hover {
+    background-color: #e3efff;
+    border-color: #0073e6;
+  }
+  
+  /* Submit Button */
+  button {
+    background-color: #0073e6;
+    color: white;
+    padding: 14px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: #005bb5;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .intro-card {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .intro-card img {
+      width: 160px;
+    }
+  
+    .form-section {
+      padding: 25px;
+    }
+  
+    .checkbox-group {
+      grid-template-columns: 1fr;
+    }
+  }
+  

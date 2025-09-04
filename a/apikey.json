@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "epics-health",
+  "private_key_id": "",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCAdiuOlFerFa+g\n8PrEquIPiCzGzAkIr7vKnshxDLv56Oz0l3oeRYQcwT7hQqQ7jhGuGNXgfreKXckL\nbgRHye+OzatqvYxjizPKnNGGS4e9pVwWCBSWv6Dq8Dk76QwTI4MtxazPOugq05IG\ncSRRNZh3P+5on0QYjQNaqrawqLD9kXbsfrzi6JBsha1yRg1URKno+JxoQn62BzSh\npTif3qTxkrW6rS+9RenujD+2vOvd3Dg5XcB+2ljy3abe7TsFVzCgLv/pfn7ZpfOU\nfMZLDfbibMzX42n3NgirjC1zh20KIgcqM67oC7MJA1IAvX9GxG8fZg8Vg9RatJwS\nSX1qNJrVAgMBAAECggEAHWPr3zkNPbU+c2Hu3aQDCG6tX+Y6guRB4L+nOEYjk6+4\n1tT5OYfKDBIiYsMuc/mzDdPcyvny4BNI9fZ7wDjxOAjSGR+4yOWGOera/RC2w6rb\ngKbknwDEvjurvIs7Gf3b+1LokJj3mSTCmfq0xmeutEnKL+GQYNWSWOIJ3i0aIUkd\no1myyYVlr+xy72tl+87BC0tNwXlE31UL2RYy3VahFwGcnxJeo/1uj0quBpJPZxHM\nytTnVwjikm/1p5EzjwuuTuC6x6hvKSJC5Y5dZ837rPWfbd0zXgbups5mUkqCOy6m\nBImdei34Gr3DQSZUlfheJj8dFvx36Zw1oDphRhJWAQKBgQC1l+HKt5Jext2ZeSzk\nPsDigckYBZF5g/kq1YcSbnU2n91RJxMwm6nlUsMVvN5b8fQ/YWfpknFLsNHVjiQd\nAkVr6wVDexFc9+BU4fNat+7qIVRm1Ln5l1E47z53LqiG8T0aag3alMApMiZXVBQN\n6RWmsV2v6I58SG6imvOpUAx9wQKBgQC1GRJxhElVg1YlDHzyvE9qwu7BqoTuPQ0y\n1vnIkeK/dWoSKw+JFDj7epufoA6bggeprhnuE4E8DQp7/YVINqTz9SMD03sM4462\nBd45lKJal+RRU/of1cOb56b8s9WRWYT8RGfEWRwI/ZaRc7Y35DSjGL8AUEYe1vU6\n2aT0ovTKFQKBgQCDPzYTdSBWXfc2AI3AndZ9H36/XO7q28bP/ap1WN5gz6R/DfXh\nsPBXbbzQTkSMQdDdqkIXYB+ArFjMt8JEMSsJt8CDKETBY+qAjxp7G+uSzuoYtHGC\nAqrSsp/8Nf3aIiuelr5SmCZW4Ac0IPGpqChc5V6oUDYDf7puzf2EBvYwQQKBgQCb\nkKsIOnPockbI0p5uwZaTBlqkoH9KS8WPu52cTr1ybEEu1DCnN2jvldYjXBHQQfWl\nK7p4iebFGAq+kfwxGUe/jP+EJOGaI8wOzqGj4utIWRw3RKUjPbSns2n9v9mg3z5e\nmcBtqYJssrHpxnVsM6uHwxUoBs0FZvAHmriZsXYINQKBgQCMi+3KdAs1is9/g2el\nxWDuBQzItumEUqZipK1ziutPkViLQNIiGIm9/kZyQLcv0jaReRLNxCUko6CEzfxF\n8pfqrepbIDJU4tWDVVp6vlubquL1xoZaulkSMY8+LRJGQRJXBeiOzYfIW9/pdySG\nZN24wA2kO33gP3sy6ZnVJaZjJw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "doc-upload@epics-health.iam.gserviceaccount.com",
+  "client_id": "106309715403754149543",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/doc-upload%40epics-health.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

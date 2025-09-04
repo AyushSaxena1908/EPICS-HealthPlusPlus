@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Health++ Assistant</title>
+  <link rel="stylesheet" href="chatbot.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="chat-wrapper">
+    <header class="chat-header">
+      <h2>Health++ Assistant</h2>
+      <p>Need help? Our assistant is here 24/7</p>
+    </header>
+
+    <main id="chat-container">
+      <div id="chat-box">
+        <div class="message bot-message">👩‍⚕️ Hello! How can I assist you today?</div>
+      </div>
+
+      <div id="input-area">
+        <input type="text" id="user-input" placeholder="Describe your issue..." />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </main>
+
+    <footer class="chat-footer">
+      <p>&copy; 2025 Health++ Hospital. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="chatbot.js"></script>
+</body>
+</html>

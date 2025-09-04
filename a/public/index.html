@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health++ Document Upload</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- <header>
+            <h1>Health++ Document Upload</h1>
+            <p>Upload your health-related documents securely.</p>
+        </header> -->
+        <div class="header">
+            <header class="header-content">
+                <a href="#logo" class="logo">
+                    <img src="colored_logo.png" alt="logoImage" class="logo-icon" />
+                    <span class="logo-text">Health++</span>
+                </a>
+            </header>
+        </div>
+        
+        <main>
+            <section class="upload-section">
+                <div class="doc1">
+                    <img src="doc.png" class="logo_">
+                    <span class="doc-text">Upload Health Documents</span>
+                    <!-- <h2>Upload Health Documents</h2> -->
+                </div>
+                <div id="healthUploadContainer">
+                    <div class="personal-upload-box">
+                        <form id="healthUploadForm" action="/upload" method="POST" enctype="multipart/form-data">
+                            <label for="healthFileInput">Choose a health document to upload:</label>
+                            <input type="file" name="file" class="healthFileInput" accept=".pdf,.doc,.docx,.jpg,.png" required>
+                            <label for="healthDocType">Select Document Type:</label>
+                            <select class="healthDocType">
+                                <option value="medical_report">Medical Report</option>
+                                <option value="prescription">Prescription</option>
+                                <option value="lab_result">Lab Result</option>
+                                <option value="insurance_document">Insurance Document</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+                <button id="addHealthUpload">+ Add Another Health Document</button>
+                <button id="submitHealthDocuments">Upload Health Documents</button>
+                <div id="uploadedHealthDocuments">
+                    <h3>Uploaded Health Documents</h3>
+                    <ul id="healthDocumentList"></ul>
+                </div>
+                <div id="healthPreview" class="preview-section"></div>
+            </section>
+
+            <section class="upload-section">
+                <div class="doc1">
+                    <img src="doc.png" class="logo_">
+                    <span class="doc-text">Upload Personal Documents</span>
+                    <!-- <h2>Upload Health Documents</h2> -->
+                </div>
+                <form id="healthUploadForm" action="/upload" method="POST" enctype="multipart/form-data">
+                    <div id="personalUploadContainer">
+                        <div class="personal-upload-box">
+                            <label for="personalFileInput">Choose a personal document to upload:</label>
+                            <input type="file" class="personalFileInput" name="file" accept=".pdf,.doc,.docx,.jpg,.png" required>
+                            <label for="personalDocType">Select Document Type:</label>
+                            <select class="personalDocType">
+                                <option value="id">Identification (ID)</option>
+                                <option value="address_proof">Address Proof</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+                <button id="addPersonalUpload">+ Add Another Personal Document</button>
+                <button id="submitPersonalDocuments">Upload Personal Documents</button>
+                <div id="uploadedPersonalDocuments">
+                    <h3>Uploaded Personal Documents</h3>
+                    <ul id="personalDocumentList"></ul>
+                </div>
+                <div id="personalPreview" class="preview-section"></div>
+            </section>
+
+            <section class="document-types">
+                <div class="doc1">
+                    <img src="doc1.png" class="logo_">
+                    <span class="doc-text">Document Categories for Upload</span>
+                    <!-- <h2>Upload Health Documents</h2> -->
+                </div>
+                <ul>
+                    <li>✅ Medical Reports</li>
+                    <li>✅ Prescriptions</li>
+                    <li>✅ Lab Results</li>
+                    <li>✅ Insurance Documents</li>
+                    <li>✅ Personal Identification (ID)</li>
+                    <li>✅ Medical History</li>
+                    <li>✅ Vaccination Records</li>
+                    <li>✅ Other Relevant Documents</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-left">
+                <div class="logo_text">
+                    <img src="colored_logo.png" alt="Health++ Logo" class="logo">
+                    <span class="brand-name">Health++</span>
+                </div>
+                <p>
+                    Health++ Headquarters<br>
+                    VIT Bhopal University,<br>
+                    Sehore, Bhopal,<br>
+                    Madhya Pradesh - 466114
+                </p>
+            </div>            
+        
+            <div class="footer-center">
+                <h4>STAY IN TOUCH</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="insta.png" alt="Instagram"></a>
+                    <a href="#"><img src="face.jpg" alt="Facebook"></a>
+                    <a href="#"><img src="x.png" alt="Twitter"></a>
+                    <a href="#"><img src="youtube.png" alt="YouTube"></a>
+                </div>
+            </div>
+        
+            <div class="footer-right">
+                <p>
+                    <a href="#">Privacy Policy</a> |
+                    <a href="#">Terms & Conditions</a> |
+                    <a href="#">Refund Policy</a> |
+                    <a href="#">Contact Us</a> |
+                    <a href="#">Sitemap</a>
+                </p>
+                <p>&copy; 2025 Health++. All Rights Reserved.</p>
+            </div>
+        </footer>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

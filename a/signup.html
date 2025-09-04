@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="Login.css">
+    <script type="module" src="firebase-config.js"></script>
+</head>
+<body>
+    <div class="header">
+        <a href="#logo" class="logo">
+            <img src="img/colored_logo.png" alt="logoImage" class="logo-icon" />
+            <span class="logo-text">Health++</span>
+        </a>
+    </div>
+    
+    <!-- Registration Form -->
+    <div class="container" id="signup-container">
+        <h2>Register</h2>
+        <form id="signup-form">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <button id="google-login-btn" class="google-login-btn">
+            <img src="img/google-icon.png" alt="Google Icon" class="google-icon"> Login with Google
+        </button>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+
+    <!-- Pop-up for Phone Number Input -->
+    <div class="popup" id="phone-popup" style="display: none;">
+        <div class="popup-content">
+            <h3>Enter Your Phone Number</h3>
+            <input type="text" id="google-phone" placeholder="Phone Number" required>
+            <button id="phone-submit-btn">Submit</button>
+        </div>
+    </div>
+
+    <script type="module">
+        import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+        import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+        import { auth, db } from "./firebase-config.js";
+
+        // Handle normal email-password signup
+        document.getElementById("signup-form").addEventListener("submit", async function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirm-password").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            try {
+                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+                const user = userCredential.user;
+
+                // Store user details in Firestore collection named 'login'
+                await setDoc(doc(db, "login", user.uid), {
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    uid: user.uid
+                });
+
+                alert("Signup successful!");
+                window.location.href = "../website.html";
+            } catch (error) {
+                alert("Error: " + error.message);
+            }
+        });
+
+        // Handle Google Sign-In with phone number requirement
+        document.getElementById("google-login-btn").addEventListener("click", async function() {
+            const provider = new GoogleAuthProvider();
+
+            try {
+                const result = await signInWithPopup(auth, provider);
+                const user = result.user;
+                
+                // Check if the phone number is provided
+                if (!user.phoneNumber) {
+                    document.getElementById("signup-container").style.display = "none"; // Hide main form
+                    document.getElementById("phone-popup").style.display = "block"; // Show phone input popup
+                    
+                    document.getElementById("phone-submit-btn").addEventListener("click", async function() {
+                        const phone = document.getElementById("google-phone").value;
+                        if (!phone) {
+                            alert("Phone number is required!");
+                            return;
+                        }
+
+                        // Store user details in Firestore collection named 'login'
+                        await setDoc(doc(db, "login", user.uid), {
+                            name: user.displayName,
+                            email: user.email,
+                            phone: phone,
+                            uid: user.uid
+                        });
+
+                        alert("Login successful!");
+                        window.location.href = "../website.html";
+                    });
+                } else {
+                    // If phone number exists, store user data directly
+                    await setDoc(doc(db, "login", user.uid), {
+                        name: user.displayName,
+                        email: user.email,
+                        phone: user.phoneNumber,
+                        uid: user.uid
+                    });
+
+                    alert("Login successful!");
+                    window.location.href = "../website.html";
+                }
+            } catch (error) {
+                alert("Error: " + error.message);
+            }
+        });
+
+    </script>
+
+    <style>
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+        .popup-content {
+            text-align: center;
+        }
+        .popup-content input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .popup-content button {
+            background: blue;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    
+</body>
+</html>

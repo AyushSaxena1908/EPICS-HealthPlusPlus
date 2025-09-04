@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css">
+    <script type="module" src="firebase-config.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/colored_logo.png" alt=" Health++ Logo" >
+            <span class="logo-text">Health++</span>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="main-container">
+            <div class="welcome-section">
+                <h1>Join Us Today – Quick & Easy Registration!</h1>
+                <p>Register now to access seamless online healthcare solutions, book appointments, consult with doctors, and manage medical records effortlessly.</p>
+                
+                <h2>Why Register?</h2>
+                <ul>
+                    <li>✅ Book Appointments Online</li>
+                    <li>✅ Secure Digital Prescriptions</li>
+                    <li>✅ Easy Access to Medical History</li>
+                    <li>✅ 24/7 Support & Assistance</li>
+                    <li>✅ Hassle-Free Online Payments</li>
+                </ul>
+            
+                <p><strong>Fill in the details below and get started today!</strong></p>
+            </div>
+
+        <div class="container">
+            <h1>Registration Form</h1>
+            <form id="registration-form" method="post" name="google-sheet">
+                <div class="input-group">
+                    <label>Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label>Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="input-group">
+                    <label>Age</label>
+                    <input type="number" id="age" name="age" required 
+                        oninput="this.value = this.value.replace(/\D/g, '')">
+                </div>
+                
+                <div class="input-group">
+                    <label>Blood Group</label>
+                    <select id="bloodGroup" name="bloodGroup" required class="input-box">
+                        <option value="" disabled selected>Select Blood Group</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required maxlength="10" pattern="[0-9]{10}" 
+                        title="Enter a valid 10-digit phone number"
+                        oninput="this.value = this.value.replace(/\D/g, '').slice(0, 10)">
+                </div>
+                <div class="input-group">
+                    <label>Address</label>
+                    <input type="text" id="address" name="address" required autocomplete="off">
+                    <ul id="suggestions"></ul> 
+                </div>
+                
+                <div class="input-group">
+                    <label>Symptoms</label>
+                    <input type="text" id="symptoms" name="symptoms" required>
+                </div>
+                <div class="input-group">
+                    <label>Email ID</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="success-message" style="display: none; font-size: 50px; text-align: center;">👍</div>
+        </div>
+    </div>
+
+    <!-- Firebase -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getFirestore, collection, addDoc, getDocs, query, where, updateDoc, doc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+        
+        const firebaseConfig = {
+            apiKey: "AIzaSyA2RjFkz9Z1bzt8fMXdT6FX_ZkSahktEg0",
+            authDomain: "epic-79cec.firebaseapp.com",
+            projectId: "epic-79cec",
+            storageBucket: "epic-79cec.appspot.com",
+            messagingSenderId: "816372499365",
+            appId: "1:816372499365:web:2ccffda74bb65207119e4c",
+            measurementId: "G-QGFT927NZF"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        document.getElementById('registration-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const dob = document.getElementById("dob").value;
+            const age = document.getElementById("age").value;
+            const bloodGroup = document.getElementById("bloodGroup").value;
+            const phone = document.getElementById("phone").value;
+            const address = document.getElementById("address").value;
+            const symptoms = document.getElementById("symptoms").value;
+            const email = document.getElementById("email").value;
+
+            try {
+                // Check if user already exists (by email)
+                const q = query(collection(db, "register"), where("email", "==", email));
+                const querySnapshot = await getDocs(q);
+
+                if (!querySnapshot.empty) {
+                    // If user exists, update the record
+                    const existingDoc = querySnapshot.docs[0];
+                    await updateDoc(doc(db, "register", existingDoc.id), {
+                        name,
+                        dob,
+                        age,
+                        bloodGroup,
+                        phone,
+                        address,
+                        symptoms,
+                        email
+                    });
+
+                } else {
+                    // If user doesn't exist, add a new record
+                    await addDoc(collection(db, "register"), {
+                        name,
+                        dob,
+                        age,
+                        bloodGroup,
+                        phone,
+                        address,
+                        symptoms,
+                        email
+                    });
+                }
+
+                // Show thumbs-up emoji
+                const successMessage = document.getElementById("success-message");
+                successMessage.style.display = "block";
+                setTimeout(() => { successMessage.style.display = "none"; }, 1000);
+
+            } catch (error) {
+                console.error('❌ Error saving to Firestore:', error);
+                alert("Error saving data. Please try again!");
+            }
+        });
+    </script>
+
+    <script>
+        // Google Sheets Submission (Unchanged)
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyAmc8vX4z6bsbc5T77JN5tl2OgAga9bI_6i8Yack_B0uKybUV_WPoDrEKi7_h5OOGc/exec'
+        const form = document.forms['google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    alert("Thanks for Contacting us...!");
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+    <script>
+        document.getElementById('address').addEventListener('input', function () {
+            let query = this.value.trim(); // Trim whitespace
+            if (query.length > 2) { // Start searching after 3 characters
+                fetch(`https://nominatim.openstreetmap.org/search?format=json&countrycodes=in&q=${query}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        let suggestions = document.getElementById('suggestions');
+                        suggestions.innerHTML = ""; // Clear previous suggestions
+                        
+                        data.forEach(place => {
+                            let listItem = document.createElement('li');
+                            listItem.textContent = place.display_name;
+                            
+                            listItem.onclick = function () {
+                                document.getElementById('address').value = place.display_name;
+                                suggestions.innerHTML = ""; // Clear suggestions after selection
+                            };
+                            
+                            suggestions.appendChild(listItem);
+                        });
+                    })
+                    .catch(error => console.error("Error fetching address suggestions:", error));
+            }
+        });
+    </script>
+    
+</body>
+</html>

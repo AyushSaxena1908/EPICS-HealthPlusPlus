@@ -1,0 +1,356 @@
+:root {
+    --primary-color: #007bff;
+    --primary-dark: #0056b3;
+    --secondary-color: #6366F1;
+    --background-color: #f4f4f4;
+    --card-background: #f9f9f9;
+    --text-color: #333;
+    --border-color: #ddd;
+    --hover-background: #e9ecef;
+    --hover-list-background: #d1d1d1;
+    --font-family: 'Arial', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    text-decoration: none;
+    gap: 0.625rem;
+}
+
+.logo-icon {
+    height: 2.12rem;
+    width: 1.938rem;
+}
+
+.header-content {
+    width: 100%;
+}
+
+/* Main Content Styles */
+main {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+/* Upload Section Styles */
+.upload-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background: var(--card-background);
+    transition: background 0.3s;
+}
+
+.upload-section:hover {
+    background: var(--hover-background);
+}
+
+.upload-section h2 {
+    color: var(--text-color);
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+/* Form Styles */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="file"],
+select {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 1em;
+}
+
+.doc-text{
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.doc1{
+    margin-bottom: 20px;
+}
+button {
+    background: var(--secondary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: var(--primary-dark);
+    transform: scale(1.05);
+}
+
+/* Personal Upload Box Styles */
+.personal-upload-box {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background: var(--card-background);
+}
+
+.logo_{
+    height: 2.12rem; 
+    width: auto;
+}
+/* Uploaded Documents Styles */
+#uploadedHealthDocuments,
+#uploadedPersonalDocuments {
+    margin-top: 20px;
+}
+
+#uploadedHealthDocuments h3,
+#uploadedPersonalDocuments h3 {
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+/* List Styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: var(--hover-background);
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+ul li:hover {
+    background: var(--hover-list-background);
+}
+
+/* Document Types Section */
+.document-types {
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background: var(--card-background);
+}
+
+.document-types h2 {
+    color: var(--text-color);
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.document-types ul {
+    padding-left: 20px;
+}
+
+.document-types li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+/* Footer Styles */
+/* footer {
+    text-align: center;
+    padding: 10px 0;
+    background: var(--primary-color);
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+} */
+
+.footer {
+    background-color: #f9f9f9;
+    padding: 20px 40px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 1px solid #ccc;
+    color: #333;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1 1 300px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.footer-center h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.social-icons a img {
+    height: 40px;
+    width: 40px;
+    margin: 0 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer-right a {
+    text-decoration: none;
+    color: #007bff;
+    margin-right: 10px;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+
+.footer-right p:last-child {
+    margin-top: 10px;
+    color: #555;
+    font-size: 14px;
+}
+
+.logo_text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2b2b2b;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .upload-section h2 {
+        font-size: 1.5em;
+    }
+
+    input[type="file"],
+    select {
+        font-size: 0.9em;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 1em;
+    }
+
+    ul li {
+        font-size: 0.9em;
+    }
+
+    .personal-upload-box {
+        padding: 10px;
+    }
+
+    .document-types h2 {
+        font-size: 1.5em;
+    }
+
+    .document-types li {
+        font-size: 1em;
+    }
+}
+
+/* Preview Section Styles */
+.preview-section {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background: var(--card-background);
+}
+
+.preview-section img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.preview-section iframe {
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
+}
+
+/* Accessibility Styles */
+button:focus,
+input[type="file"]:focus,
+select:focus {
+    outline: 2px solid var(--primary-dark);
+    outline-offset: 2px;
+}
+

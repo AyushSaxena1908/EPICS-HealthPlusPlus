@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment History - Health++</title>
+  <link rel="stylesheet" href="payment-history.css">
+</head>
+<body>
+  <header>
+    <h1>Health++ Doctors & Services</h1>
+    <p>Meet our experts and choose the plan that fits you best.</p>
+  </header>
+
+  <main class="grid-container">
+    <!-- Doctor 1 -->
+    <div class="card">
+      <div class="left">
+        <img src="img/images.png" alt="Dr. Ayesha Mehta">
+        <h2>Dr. Ayesha Mehta</h2>
+        <p>Cardiologist</p>
+      </div>
+      <div class="right">
+        <h3>Subscription Plan</h3>
+        <ul>
+          <li>3 Consultations/month</li>
+          <li>24x7 Chat Support</li>
+          <li>Health Tips Weekly</li>
+        </ul>
+        <button>Subscribe ₹499</button>
+      </div>
+
+      <!-- Review Section -->
+      <div class="review-section">
+        <h4>Leave a Review</h4>
+        <div class="star-rating">
+          <span class="star" data-rating="1">&#9734;</span>
+          <span class="star" data-rating="2">&#9734;</span>
+          <span class="star" data-rating="3">&#9734;</span>
+          <span class="star" data-rating="4">&#9734;</span>
+          <span class="star" data-rating="5">&#9734;</span>
+        </div>
+        <textarea class="review-input" placeholder="Write your review..."></textarea>
+        <button class="submit-review">Submit Review</button>
+        <div class="all-reviews"></div>
+      </div>
+    </div>
+
+    <!-- Doctor 2 -->
+    <div class="card">
+      <div class="left">
+        <img src="img/images.png" alt="Dr. Rahul Iyer">
+        <h2>Dr. Rahul Iyer</h2>
+        <p>Dermatologist</p>
+      </div>
+      <div class="right">
+        <h3>Premium Care</h3>
+        <ul>
+          <li>Unlimited Consultations</li>
+          <li>Priority Booking</li>
+          <li>Personal Diet Plan</li>
+        </ul>
+        <button>Subscribe ₹999</button>
+      </div>
+
+      <!-- Review Section -->
+      <div class="review-section">
+        <h4>Leave a Review</h4>
+        <div class="star-rating">
+          <span class="star" data-rating="1">&#9734;</span>
+          <span class="star" data-rating="2">&#9734;</span>
+          <span class="star" data-rating="3">&#9734;</span>
+          <span class="star" data-rating="4">&#9734;</span>
+          <span class="star" data-rating="5">&#9734;</span>
+        </div>
+        <textarea class="review-input" placeholder="Write your review..."></textarea>
+        <button class="submit-review">Submit Review</button>
+        <div class="all-reviews"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="paymenthandler.js"></script>
+</body>
+</html>

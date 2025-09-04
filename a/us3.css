@@ -1,0 +1,368 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+.header-content{
+    margin-top: 5px;
+    padding-top: 15px;
+    padding-left: 14px;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+#image_ {
+    background-image: url('images/hos.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 20px; /* Adjust the value as needed */
+    overflow: hidden; /* Ensures the image respects the border-radius */
+}
+
+.icon, .icon1 {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    text-decoration:none ;
+    gap: 0.625rem;
+}
+
+.logo-icon{
+    height: 2.12;
+    width: 1.938rem;
+}
+
+.logo-text{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.mission-vision {
+    display: flex;
+    justify-content: space-between; /* Ensures spacing */
+    align-items: center;
+    gap: 30px; /* Adds gap between boxes */
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.mission-vision .box {
+    background: #f9f9ff;
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #5e60ce;
+    transition: all 0.3s ease-in-out;
+    width: 45%; /* Ensures both boxes have equal width */
+}
+
+.mission-vision .box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Fix for Smaller Screens */
+@media (max-width: 768px) {
+    .mission-vision {
+        flex-direction: column;
+        gap: 20px; /* Adds space in vertical layout */
+    }
+
+    .mission-vision .box {
+        width: 90%; /* Makes boxes fit properly on smaller screens */
+    }
+}
+
+
+.about {
+    max-width: 900px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.mission-vision .box {
+    flex: 1 1 45%;
+    background: #f9f9ff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.mission-vision .box:hover {
+    transform: translateY(-5px);
+}
+.mission-vision .box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.map-container iframe {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} 
+
+
+
+/* India Map Section */
+.location {
+    text-align: center;
+    padding: 40px;
+    background-color: #eef2ff;
+}
+.location h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+.map-container {
+    display: flex;
+    justify-content: center;
+}
+.map-container img {
+    max-width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#video_ {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 20px; /* Adjust the value as needed */
+    overflow: hidden; /* Ensures the image respects the border-radius */
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.location {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.map-container {
+    margin-top: 20px;
+}
+
+
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+/* Team Container Styles */
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Team Member Styles */
+.team-member {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    animation: slideIn 0.5s ease forwards;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* .team-member img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #4CAF50; 
+    transition: transform 0.3s;
+    
+} */
+.team-member img {
+    width: 100px;  /* Set a fixed width */
+    height: 150px; /* Set a fixed height */
+    object-fit: cover; /* Ensures images fill the box without distortion */
+    border-bottom: 2px solid #4CAF50; /* Updated border color */
+    transition: transform 0.3s;
+}
+.team-member img:hover {
+    transform: scale(1.1); /* Zoom effect on image hover */
+}
+
+/* Team Member Text Styles */
+.team-member h2 {
+    margin: 15px 0 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.team-member p {
+    margin: 5px 0;
+    color: #666;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #4d4d77; /* Solid green color */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.footer-content ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.footer-content ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-content ul li a:hover {
+    color: #ffcc00; /* Highlight color on hover */
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0;
+    }
+
+    .logo h1 {
+        font-size: 2em;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .team-member h2 {
+        font-size: 1.3em; /* Smaller font size for mobile */
+    }
+
+    .team-member p {
+        font-size: 0.9em; /* Smaller font size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        display: block; /* Stack navigation items vertically */
+        margin: 10px 0; /* Add spacing between items */
+    }
+
+    .team-container {
+        grid-template-columns: 1fr; /* Single column layout on small screens */
+    }
+}

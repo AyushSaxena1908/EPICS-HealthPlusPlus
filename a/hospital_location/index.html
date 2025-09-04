@@ -1,0 +1,193 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health++ | Hospital & Doctor Search</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-healthcare">
+  <header>
+    <img src="colored_logo.png" alt="logo" class="logo-health">
+    <h1> Health++</h1>
+    <p>Your gateway to reliable healthcare</p>
+  </header>
+
+  <main>
+    <!-- Hospital Search Section -->
+    <section class="hospital-search">
+      <h2>Search Hospitals</h2>
+      <!-- <input type="text" id="hospitalSearch" placeholder="Enter hospital name..."> -->
+      <button id="searchBtn">Search</button>
+      <input type="text" id="locationInput" placeholder="Enter a location (e.g., AIIMS Hospital)">
+      <!-- <button id="searchBtn">Search</button> -->
+      <button onclick="openMap()">Open in Google Maps</button>
+      <ul id="hospitalResults"></ul>
+    </section>
+
+    <!-- Specialization Filter Section -->
+    <section class="specialization-filter">
+      <h2>Filter by Doctor Specialization</h2>
+      <select id="specializationSelect">
+        <option value="">--Select Specialization--</option>
+        <option value="heart">Heart</option>
+        <option value="cardiology">cardiology</option>
+        <option value="brain">brain</option>
+        <option value="Neurologist">Neurologist</option>
+        <option value="Pediatrician">Pediatrician</option>
+        <option value="Psychiatrist">Psychiatrist</option>
+        <option value="General">General Physician</option>
+      </select>
+      <ul id="doctorResults"></ul>
+    </section>
+
+    <!-- Doctor Info Form -->
+    <section class="doctor-form">
+      <h2>Selected Doctor Details</h2>
+      <form id="doctorInfoForm" class="doctor-form-split">
+        <!-- Left Part -->
+        <div class="form-left">
+          <label for="docName">Doctor Name:</label>
+          <input type="text" id="docName" required>
+      
+          <label for="docSpecialization">Specialization:</label>
+          <input type="text" id="docSpecialization" required>
+      
+          <label for="docTiming">Timing:</label>
+          <input type="text" id="docTiming" required>
+      
+          <label for="docHospital">Hospital Name:</label>
+          <input type="text" id="docHospital" required>
+      
+          <label for="docPhone">Phone Number:</label>
+          <input type="tel" id="docPhone" required>
+        </div>
+      
+        <!-- Right Part -->
+        <div class="form-right">
+          <label for="docEmail">Email (Optional):</label>
+          <input type="email" id="docEmail">
+      
+          <label for="docNotes">Additional Notes:</label>
+          <textarea id="docNotes" rows="4" placeholder="Optional notes about the doctor"></textarea>
+      
+          <!-- Preferred Contact Method -->
+          <div>
+            <div class="form-section-title">Preferred Contact Method</div>
+            <div class="contact-options">
+              <label><input type="radio" name="contact" value="Phone"> Phone</label>
+              <label><input type="radio" name="contact" value="Email"> Email</label>
+              <label><input type="radio" name="contact" value="WhatsApp"> WhatsApp</label>
+            </div>
+          </div>
+
+          <!-- Available Days -->
+          <div>
+            <div class="form-section-title">Available Days</div>
+            <div class="availability-options">
+              <label><input type="checkbox" name="days" value="Monday"> Monday</label>
+              <label><input type="checkbox" name="days" value="Tuesday"> Tuesday</label>
+              <label><input type="checkbox" name="days" value="Wednesday"> Wednesday</label>
+              <label><input type="checkbox" name="days" value="Thursday"> Thursday</label>
+              <label><input type="checkbox" name="days" value="Friday"> Friday</label>
+              <label><input type="checkbox" name="days" value="Saturday"> Saturday</label>
+              <label><input type="checkbox" name="days" value="Sunday"> Sunday</label>
+            </div>
+          </div>
+        </div>
+        <button type="submit">Submit Info</button>
+      </form>
+      
+    </section>
+
+    <!-- Testimonials Section -->
+  
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-left">
+        <div class="logo_text">
+            <img src="colored_logo.png" alt="Health++ Logo" class="logo">
+            <span class="brand-name">Health++</span>
+        </div>
+        <p>
+            Health++ Headquarters<br>
+            VIT Bhopal University,<br>
+            Sehore, Bhopal,<br>
+            Madhya Pradesh - 466114
+        </p>
+    </div>            
+
+    <div class="footer-center">
+        <h4>STAY IN TOUCH</h4>
+        <div class="social-icons">
+            <a href="#"><img src="insta.png" alt="Instagram"></a>
+            <a href="#"><img src="face.jpg" alt="Facebook"></a>
+            <a href="#"><img src="x.png" alt="Twitter"></a>
+            <a href="#"><img src="youtube.png" alt="YouTube"></a>
+        </div>
+    </div>
+
+    <div class="footer-right">
+        <p>
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms & Conditions</a> |
+            <a href="#">Refund Policy</a> |
+            <a href="#">Contact Us</a> |
+            <a href="#">Sitemap</a>
+        </p>
+        <p>&copy; 2025 Health++. All Rights Reserved.</p>
+    </div>
+</footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("doctorInfoForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+  
+      const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSfXOeGhOTGVaz5N7ulEADNmPOv4FoLuRFDQArZ4HDeyrvPL0g/formResponse"; // Replace with your form's real URL
+  
+      const formData = new FormData();
+      formData.append("entry.630467451", document.getElementById("docName").value); // Doctor Name
+      formData.append("entry.640314303", document.getElementById("docSpecialization").value); // Specialization
+      formData.append("entry.1013792955", document.getElementById("docTiming").value); // Timing
+      formData.append("entry.1751463044", document.getElementById("docHospital").value); // Hospital Name
+      formData.append("entry.1235816125", document.getElementById("docPhone").value); // Phone Number
+      formData.append("entry.604578876", document.getElementById("docEmail").value); // Email
+      formData.append("entry.1187430291", document.getElementById("docNotes").value); // Notes
+  
+      // Get radio value
+      const contact = document.querySelector("input[name='contact']:checked");
+      if (contact) {
+        formData.append("entry.374702078_sentinel", contact.value);
+      }
+  
+      // Get checkbox values
+      const days = document.querySelectorAll("input[name='days']:checked");
+      days.forEach(day => {
+        formData.append("163126993_sentinel", day.value);
+      });
+  
+      fetch(formURL, {
+        method: "POST",
+        mode: "no-cors",
+        body: formData
+      }).then(() => {
+        alert("Doctor Info submitted successfully!");
+        document.getElementById("doctorInfoForm").reset();
+      }).catch(err => {
+        alert("Error submitting the form.");
+        console.error(err);
+      });
+    });
+  </script>
+  
+</body>
+
+</html>
